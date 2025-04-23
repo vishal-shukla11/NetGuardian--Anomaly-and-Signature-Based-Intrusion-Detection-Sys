@@ -45,7 +45,7 @@ ids_system.log
 *.pickle
 
 # Configuration files with sensitive data
-ids_config.yaml
+#ids_config.yaml
 
 # System Files
 Thumbs.db

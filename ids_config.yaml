@@ -1,0 +1,43 @@
+interface: Ethernet  # Change this to your network interface
+training:
+  sample_size: 1000
+  retrain_interval: 3600  # 1 hour
+  save_path: training_data
+detection:
+  contamination: 0.1
+  anomaly_threshold: -0.5
+  signature_rules:
+    syn_flood:
+      threshold: 50
+      rate: 100
+    fin_flood:
+      threshold: 50
+      rate: 100
+    port_scan:
+      threshold: 100
+      rate: 50
+    raw_ip_attack:
+      threshold: 50
+    icmp_flood:
+      threshold: 50
+    flood_attack:
+      threshold: 100
+alert:
+  email:
+    enabled: false
+    smtp_server: smtp.gmail.com
+    smtp_port: 587
+    username: your_email@gmail.com
+    password: your_app_password
+    recipients:
+      - recipient1@example.com
+      - recipient2@example.com
+  severity_levels:
+    critical: 0.9
+    high: 0.7
+    medium: 0.5
+    low: 0.3
+blocking:
+  enabled: true
+  block_duration: 3600  # 1 hour
+  max_blocks: 100 

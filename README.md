@@ -1,4 +1,4 @@
-# Intrusion Detection System (IDS)
+# NetGuardian Intrusion Detection System (IDS)
 
 A Python-based Intrusion Detection System that uses both signature-based and anomaly-based detection methods to identify potential network threats.
 
